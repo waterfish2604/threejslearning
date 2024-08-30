@@ -1,24 +1,30 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import * as THREE from 'three';
+//console.log(THREE);
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//creating a scene
+const scene = new THREE.Scene();
 
-setupCounter(document.querySelector('#counter'))
+//geometry and mat than go in mesh
+const cubeG = new THREE.BoxGeometry(1,1,1);
+const cubeM = new THREE.MeshBasicMaterial({
+  color: "aqua"
+});
+
+//mesh
+const cube = new THREE.Mesh(cubeG, cubeM);
+
+//adding mesh to scence
+scene.add(cube);
+
+//settting camera
+const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 100);
+camera.position.z=2;
+scene.add(camera);
+
+//renderer
+const canvas = document.querySelector("canvas");
+// console.log(canvas);
+
+const renderer = new THREE.WebGLRenderer({canvas});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.render(scene, camera);
