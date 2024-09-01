@@ -22,11 +22,11 @@ scene.add(cube);
 const aspectRatio = window.innerWidth/window.innerHeight;
 
 //settting camera
-// const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
 
 //Orthographix camera
 
-const camera = new THREE.OrthographicCamera(-1*aspectRatio, 1*aspectRatio, 1, -1, 0.1, 100);
+// const camera = new THREE.OrthographicCamera(-1*aspectRatio, 1*aspectRatio, 1, -1, 0.1, 100);
 camera.position.z=5;
 scene.add(camera);
 
@@ -35,12 +35,18 @@ const canvas = document.querySelector("canvas");
 // console.log(canvas);
 
 const renderer = new THREE.WebGLRenderer({canvas});
-renderer.setSize(window.innerWidth, window.innerHeight);
+
 
 //orbit controller
 const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
 control.autoRotate = true;
+
+window.addEventListener('resize', ()=> {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect=window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+})
 
 
 //making the renderloop
