@@ -38,11 +38,15 @@ const renderer = new THREE.WebGLRenderer({canvas,
   antialias: true
 });
 
+//axishelper
+const axishelper = new THREE.AxesHelper(5);
+//scene.add(axishelper);
+
 
 //orbit controller
 const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
-control.autoRotate = true;
+control.autoRotate = false;
 
 window.addEventListener('resize', ()=> {
   renderer.setSize(window.innerWidth, window.innerHeight);
