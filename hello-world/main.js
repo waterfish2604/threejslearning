@@ -19,8 +19,14 @@ const cube = new THREE.Mesh(cubeG, cubeM);
 //adding mesh to scence
 scene.add(cube);
 
+const aspectRatio = window.innerWidth/window.innerHeight;
+
 //settting camera
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+// const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+
+//Orthographix camera
+
+const camera = new THREE.OrthographicCamera(-1*aspectRatio, 1*aspectRatio, 1, -1, 0.1, 100);
 camera.position.z=5;
 scene.add(camera);
 
