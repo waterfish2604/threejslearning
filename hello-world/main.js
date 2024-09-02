@@ -11,10 +11,13 @@ const cubeG = new THREE.BoxGeometry(1,1,1);
 const cubeM = new THREE.MeshBasicMaterial({
   color: "aqua"
 });
-console.log(cubeM);
+
 
 //mesh
 const cube = new THREE.Mesh(cubeG, cubeM);
+// cube.position.x = 2;
+// cube.position.y = 1;
+console.log(cube);
 
 //adding mesh to scence
 scene.add(cube);
@@ -34,19 +37,21 @@ scene.add(camera);
 const canvas = document.querySelector("canvas");
 // console.log(canvas);
 
-const renderer = new THREE.WebGLRenderer({canvas,
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
   antialias: true
 });
+renderer.setSize(window.innerWidth, window.innerHeight);
 
 //axishelper
 const axishelper = new THREE.AxesHelper(5);
-//scene.add(axishelper);
+scene.add(axishelper);
 
 
 //orbit controller
 const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
-control.autoRotate = false;
+control.autoRotate = true;
 
 window.addEventListener('resize', ()=> {
   renderer.setSize(window.innerWidth, window.innerHeight);
