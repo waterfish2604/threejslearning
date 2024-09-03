@@ -15,12 +15,26 @@ const cubeM = new THREE.MeshBasicMaterial({
 
 //mesh
 const cube = new THREE.Mesh(cubeG, cubeM);
+const cube1 = new THREE.Mesh(cubeG, cubeM);
+cube1.position.x = 2;
+const cube2 = new THREE.Mesh(cubeG, cubeM);
+cube2.position.y = 2
 // cube.position.x = 2;
 // cube.position.y = 1;
 console.log(cube);
 
+const group = new THREE.Group();
+
+group.add(cube);
+group.add(cube1);
+group.add(cube2);
+
+scene.add(group);
+
 //adding mesh to scence
-scene.add(cube);
+// scene.add(cube);
+// scene.add(cube1);
+// scene.add(cube2);
 
 const aspectRatio = window.innerWidth/window.innerHeight;
 
@@ -30,7 +44,7 @@ const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHei
 //Orthographix camera
 
 // const camera = new THREE.OrthographicCamera(-1*aspectRatio, 1*aspectRatio, 1, -1, 0.1, 100);
-camera.position.z=5;
+camera.position.z=7;
 scene.add(camera);
 
 //renderer
@@ -51,7 +65,8 @@ scene.add(axishelper);
 //orbit controller
 const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
-control.autoRotate = true;
+control.autoRotate = false;
+control.rotateSpeed = 3.5;
 
 window.addEventListener('resize', ()=> {
   renderer.setSize(window.innerWidth, window.innerHeight);
