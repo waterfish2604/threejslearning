@@ -18,10 +18,10 @@ const cube = new THREE.Mesh(cubeG, cubeM);
 const cube1 = new THREE.Mesh(cubeG, cubeM);
 cube1.position.x = 2;
 const cube2 = new THREE.Mesh(cubeG, cubeM);
-cube2.position.y = 2
+cube2.position.x = 4
 // cube.position.x = 2;
 // cube.position.y = 1;
-console.log(cube);
+// console.log(cube);
 
 const group = new THREE.Group();
 
@@ -44,7 +44,8 @@ const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHei
 //Orthographix camera
 
 // const camera = new THREE.OrthographicCamera(-1*aspectRatio, 1*aspectRatio, 1, -1, 0.1, 100);
-camera.position.z=7;
+camera.position.z=15;
+camera.position.y=6;
 scene.add(camera);
 
 //renderer
