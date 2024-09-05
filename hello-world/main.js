@@ -39,7 +39,7 @@ scene.add(group);
 const aspectRatio = window.innerWidth/window.innerHeight;
 
 //settting camera
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 100);
 
 //Orthographix camera
 
@@ -64,7 +64,6 @@ scene.add(axishelper);
 
 
 //orbit controller
-const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
 control.autoRotate = false;
 control.rotateSpeed = 3.5;
