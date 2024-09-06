@@ -14,22 +14,29 @@ const wallmat = new THREE.MeshBasicMaterial({
 //creating mesh
 const build = new THREE.Mesh(wall, wallmat);
 
+
 scenary.add(build);
 
 //camera and renderer
 const aspectRatio = window.innerWidth/window.innerHeight;
-const cam = new THREE.PerspectiveCamera(65, aspectRatio, 0.1, 300);
+const cam = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 300);
 
 cam.position.z = 15;
+cam.position.y = 5;
 scenary.add(cam);
 
-const board = document.getElementsByClassName("canvas-to-draw");
+const board = document.querySelector(".canvas-to-draw")
 
 const render = new THREE.WebGLRenderer({
-    board
+    canvas: board,
+    antialias: true
 })
+render.setSize(window.innerWidth, window.innerHeight);
 
 const control = new OrbitControls(cam, board);
+
+const axis = new THREE.AxesHelper(10);
+scenary.add(axis);
 
 window.addEventListener('resize', ()=> {
     render.setSize(window.innerWidth, window.innerHeight);
