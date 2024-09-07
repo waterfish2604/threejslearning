@@ -76,14 +76,19 @@ build10.scale.set(2, 1, 1.01);
 build10.position.y=1.25;
 build10.position.x=10.25;
 
-// const build12 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build11 = new THREE.Mesh(wall, wallmat);
+build11.scale.set(2, 1, 1.01);
+build11.position.y=2.5;
 
-// const build13 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build12 = new THREE.Mesh(wall, wallmat);
+build12.scale.set(2, 1, 1.01);
+build12.position.y=2.5;
+build12.position.x=2.25;
 
-// const build14 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build13 = new THREE.Mesh(wall, wallmat);
+build13.scale.set(2, 1, 1.01);
+build13.position.y=2.5;
+build13.position.x=4.5;
 
 // const build15 = new THREE.Mesh(wall, wallmat);
 // build.scale.set(2, 1, 1.01);
@@ -170,9 +175,9 @@ build.add(build7);
 build.add(build8);
 build.add(build9);
 build.add(build10);
-// build.add(build11);
-// build.add(build12);
-// build.add(build13);
+build.add(build11);
+build.add(build12);
+build.add(build13);
 // build.add(build14);
 // build.add(build15);
 // build.add(build16);
@@ -219,6 +224,8 @@ const control = new OrbitControls(cam, board);
 
 const axis = new THREE.AxesHelper(10);
 scenary.add(axis);
+
+control.autoRotate = true;
 
 window.addEventListener('resize', ()=> {
     render.setSize(window.innerWidth, window.innerHeight);
