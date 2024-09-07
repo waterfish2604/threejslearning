@@ -46,23 +46,35 @@ const build4 = new THREE.Mesh(wall, wallmat);
 build4.scale.set(2, 1.01, 1.01);
 build4.position.x=8.4;
 
-// const build6 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build5 = new THREE.Mesh(wall, wallmat);
+build5.scale.set(2, 1, 1.01);
+build5.position.x=-1;
+build5.position.y=1.25
 
-// const build7 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build6 = new THREE.Mesh(wall, wallmat);
+build6.scale.set(2, 1, 1.01);
+build6.position.y=1.25;
+build6.position.x=1.25;
 
-// const build8 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build7 = new THREE.Mesh(wall, wallmat);
+build7.scale.set(2, 1, 1.01);
+build7.position.y=1.25;
+build7.position.x=3.5;
 
-// const build9 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build8 = new THREE.Mesh(wall, wallmat);
+build8.scale.set(2, 1, 1.01);
+build8.position.y=1.25;
+build8.position.x=5.75;
 
-// const build10 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build9 = new THREE.Mesh(wall, wallmat);
+build9.scale.set(2, 1, 1.01);
+build9.position.y=1.25;
+build9.position.x=8;
 
-// const build11 = new THREE.Mesh(wall, wallmat);
-// build.scale.set(2, 1, 1.01);
+const build10 = new THREE.Mesh(wall, wallmat);
+build10.scale.set(2, 1, 1.01);
+build10.position.y=1.25;
+build10.position.x=10.25;
 
 // const build12 = new THREE.Mesh(wall, wallmat);
 // build.scale.set(2, 1, 1.01);
@@ -93,9 +105,29 @@ build4.position.x=8.4;
 
 // pillars
 const pillar0 = new THREE.Mesh(pillarG, pillarM);
-pillar0.scale.set(2, 11, 2);
+pillar0.scale.set(2.01, 11, 2);
 pillar0.position.y=5;
 pillar0.position.x=-2
+
+// const pillar0 = new THREE.Mesh(pillarG, pillarM);
+// pillar0.scale.set(2, 11, 2);
+// pillar0.position.y=5;
+// pillar0.position.x=-2
+
+// const pillar0 = new THREE.Mesh(pillarG, pillarM);
+// pillar0.scale.set(2, 11, 2);
+// pillar0.position.y=5;
+// pillar0.position.x=-2
+
+// const pillar0 = new THREE.Mesh(pillarG, pillarM);
+// pillar0.scale.set(2, 11, 2);
+// pillar0.position.y=5;
+// pillar0.position.x=-2
+
+// const pillar0 = new THREE.Mesh(pillarG, pillarM);
+// pillar0.scale.set(2, 11, 2);
+// pillar0.position.y=5;
+// pillar0.position.x=-2
 
 // ground
 const ground = new THREE.Mesh(groundG, groundM);
@@ -107,15 +139,13 @@ ground.position.z=5;
 
 // white sticky substance
 const cementSmallY0 = new THREE.Mesh(cementL, cementM);
-cementSmallY0.position.x = 1;
-cementSmallY0.scale.set(0.25,1,1);
-
-const cementSmallY1 = new THREE.Mesh(cementL, cementM);
-cementSmallY1.position.x = 3.2;
-cementSmallY1.scale.set(0.25,1,1);
+cementSmallY0.position.x = 3.5;
+cementSmallY0.position.y=4.5;
+cementSmallY0.scale.set(13,10,1);
 
 const cementSmallY2 = new THREE.Mesh(cementL, cementM);
-cementSmallY2.position.x = 5.2;
+cementSmallY2.position.x = 3.1;
+
 cementSmallY2.scale.set(0.25,1,1);
 
 const cementSmallY3 = new THREE.Mesh(cementL, cementM);
@@ -134,12 +164,29 @@ build.add(build1);
 build.add(build2);
 build.add(build3);
 build.add(build4);
+build.add(build5);
+build.add(build6);
+build.add(build7);
+build.add(build8);
+build.add(build9);
+build.add(build10);
+// build.add(build11);
+// build.add(build12);
+// build.add(build13);
+// build.add(build14);
+// build.add(build15);
+// build.add(build16);
+// build.add(build17);
+// build.add(build18);
+// build.add(build19);
+// build.add(build20);
+
 
 const cementSmallYGroup = new THREE.Group();
 cementSmallYGroup.add(cementSmallY0);
-cementSmallYGroup.add(cementSmallY1);
-cementSmallYGroup.add(cementSmallY2);
-cementSmallYGroup.add(cementSmallY3);
+// cementSmallYGroup.add(cementSmallY1);
+// cementSmallYGroup.add(cementSmallY2);
+// cementSmallYGroup.add(cementSmallY3);
 
 const pillarGroup = new THREE.Group();
 pillarGroup.add(pillar0);
