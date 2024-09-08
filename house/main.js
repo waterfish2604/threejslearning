@@ -32,19 +32,19 @@ build0.scale.set(2, 1.01, 1.01);
 
 const build1 = new THREE.Mesh(wall, wallmat);
 build1.scale.set(2, 1.01, 1.01);
-build1.position.x= 2.1;
+build1.position.x= 2.25;
 
 const build2 = new THREE.Mesh(wall, wallmat);
 build2.scale.set(2, 1.01, 1.01);
-build2.position.x=4.2;
+build2.position.x=4.5;
 
 const build3 = new THREE.Mesh(wall, wallmat);
 build3.scale.set(2, 1.01, 1.01);
-build3.position.x=6.3;
+build3.position.x=6.75;
 
 const build4 = new THREE.Mesh(wall, wallmat);
 build4.scale.set(2, 1.01, 1.01);
-build4.position.x=8.4;
+build4.position.x=9;
 
 const build5 = new THREE.Mesh(wall, wallmat);
 build5.scale.set(2, 1, 1.01);
@@ -179,10 +179,64 @@ build31.scale.set(2, 1, 1.01);
 build31.position.y=6.25;
 build31.position.x=8;
 
-// const build32 = new THREE.Mesh(wall, wallmat);
-// build32.scale.set(2, 1, 1.01);
-// build32.position.y=6.25;
-// build32.position.x=-1;
+const build32 = new THREE.Mesh(wall, wallmat);
+build32.scale.set(2, 1, 1.01);
+build32.position.y=6.25;
+build32.position.x=10.25;
+
+const build33 = new THREE.Mesh(wall, wallmat);
+build33.scale.set(2, 1, 1.01);
+build33.position.y=7.5;
+
+const build34 = new THREE.Mesh(wall, wallmat);
+build34.scale.set(2, 1, 1.01);
+build34.position.y=7.5;
+build34.position.x=2.25;
+
+const build35 = new THREE.Mesh(wall, wallmat);
+build35.scale.set(2, 1, 1.01);
+build35.position.y=7.5;
+build35.position.x=4.5;
+
+const build36 = new THREE.Mesh(wall, wallmat);
+build36.scale.set(2, 1, 1.01);
+build36.position.y=7.5;
+build36.position.x=6.75;
+
+const build37 = new THREE.Mesh(wall, wallmat);
+build37.scale.set(2, 1, 1.01);
+build37.position.y=7.5;
+build37.position.x=9;
+
+const build38 = new THREE.Mesh(wall, wallmat);
+build38.scale.set(2, 1, 1.01);
+build38.position.y=8.75;
+build38.position.x=-1.25;
+
+const build39 = new THREE.Mesh(wall, wallmat);
+build39.scale.set(2, 1, 1.01);
+build39.position.y=8.75;
+build39.position.x=1;
+
+const build40 = new THREE.Mesh(wall, wallmat);
+build40.scale.set(2, 1, 1.01);
+build40.position.y=8.75;
+build40.position.x=3.25;
+
+const build41 = new THREE.Mesh(wall, wallmat);
+build41.scale.set(2, 1, 1.01);
+build41.position.y=8.75;
+build41.position.x=5.5;
+
+const build42 = new THREE.Mesh(wall, wallmat);
+build42.scale.set(2, 1, 1.01);
+build42.position.y=8.75;
+build42.position.x=7.75;
+
+const build43 = new THREE.Mesh(wall, wallmat);
+build43.scale.set(2,1,1.01);
+build43.position.y=8.75;
+build43.position.x=10;
 
 // pillars
 const pillar0 = new THREE.Mesh(pillarG, pillarM);
@@ -190,10 +244,10 @@ pillar0.scale.set(2.01, 11, 2);
 pillar0.position.y=5;
 pillar0.position.x=-2
 
-// const pillar0 = new THREE.Mesh(pillarG, pillarM);
-// pillar0.scale.set(2, 11, 2);
-// pillar0.position.y=5;
-// pillar0.position.x=-2
+const pillar1 = new THREE.Mesh(pillarG, pillarM);
+pillar1.scale.set(2, 11, 2);
+pillar1.position.y= 5;
+pillar1.position.x=10.5;
 
 // const pillar0 = new THREE.Mesh(pillarG, pillarM);
 // pillar0.scale.set(2, 11, 2);
@@ -221,8 +275,8 @@ ground.position.z=5;
 // white sticky substance
 const cementSmallY0 = new THREE.Mesh(cementL, cementM);
 cementSmallY0.position.x = 3.5;
-cementSmallY0.position.y=4.5;
-cementSmallY0.scale.set(13,10,1);
+cementSmallY0.position.y=4.25;
+cementSmallY0.scale.set(13,9.99,1);
 
 const cementSmallY2 = new THREE.Mesh(cementL, cementM);
 cementSmallY2.position.x = 3.1;
@@ -272,17 +326,18 @@ build.add(build28);
 build.add(build29);
 build.add(build30);
 build.add(build31);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
-// build.add(build20);
+build.add(build32);
+build.add(build33);
+build.add(build34);
+build.add(build35);
+build.add(build36);
+build.add(build37);
+build.add(build38);
+build.add(build39);
+build.add(build40);
+build.add(build41);
+build.add(build42);
+build.add(build43);
 
 
 
@@ -294,7 +349,7 @@ cementSmallYGroup.add(cementSmallY0);
 
 const pillarGroup = new THREE.Group();
 pillarGroup.add(pillar0);
-
+pillarGroup.add(pillar1);
 
 scenary.add(ground);
 scenary.add(build);
@@ -322,6 +377,8 @@ render.setSize(window.innerWidth, window.innerHeight);
 const control = new OrbitControls(cam, board);
 
 const axis = new THREE.AxesHelper(10);
+axis.position.x=5;
+axis.position.z=5;
 scenary.add(axis);
 
 control.autoRotate = true;
