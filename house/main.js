@@ -396,11 +396,11 @@ pillar2.position.y=5;
 pillar2.position.x=-2;
 pillar2.position.z=12.5
 
-// const pillar3 = new THREE.Mesh(pillarG, pillarM);
-// pillar3.scale.set(2.01, 11, 2.01);
-// pillar3.position.y=5;
-// pillar3.position.x=10.5
-// pillar3.position.z=12.5
+const pillar3 = new THREE.Mesh(pillarG, pillarM);
+pillar3.scale.set(2.01, 11, 2.01);
+pillar3.position.y=5;
+pillar3.position.x=10.5
+pillar3.position.z=12.5
 
 
 // ground
@@ -429,8 +429,16 @@ cementWallY1.position.y=4.25;
 // cementWallY2.position.z=12.5;
 // cementWallY2.position.y=4.25;
 
-// const cementWallY3 = cementWallY1.clone();
-// cementWallY3.position.x=10.5;
+const cementWallY31 = cementWallY1.clone();
+cementWallY31.position.x=10.5;
+cementWallY31.position.z=3;
+cementWallY31.scale.z=4;
+
+const cementWallY32 = cementWallY31.clone();
+cementWallY32.position.z=9.5;
+
+
+
 
 
 const cementWallX = new THREE.Mesh(cementL, cementM);
@@ -535,13 +543,14 @@ const cementWallYGroup = new THREE.Group();
 cementWallYGroup.add(cementWallY0);
 cementWallYGroup.add(cementWallY1);
 // cementWallYGroup.add(cementWallY2);
-// cementWallYGroup.add(cementWallY3);
+cementWallYGroup.add(cementWallY31);
+cementWallYGroup.add(cementWallY32);
 
 const pillarGroup = new THREE.Group();
 pillarGroup.add(pillar0);
 pillarGroup.add(pillar1);
-// pillarGroup.add(pillar2);
-// pillarGroup.add(pillar3);
+pillarGroup.add(pillar2);
+pillarGroup.add(pillar3);
 
 scenary.add(ground);
 scenary.add(build);
