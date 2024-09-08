@@ -268,7 +268,7 @@ pillar1.position.x=10.5;
 const ground = new THREE.Mesh(groundG, groundM);
 ground.scale.set(15, 0.5, 15);
 ground.position.y=-0.75;
-ground.position.x=4;
+ground.position.x=4.25;
 ground.position.z=5;
 
 
@@ -361,9 +361,9 @@ scenary.add(pillarGroup);
 const aspectRatio = window.innerWidth/window.innerHeight;
 const cam = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 300);
 
-cam.position.z = 17;
-cam.position.y = 15;
-cam.position.x = 15;
+cam.position.z = 21;
+cam.position.y = 10;
+cam.position.x = 21;
 scenary.add(cam);
 
 const board = document.querySelector(".canvas-to-draw")
@@ -381,6 +381,7 @@ axis.position.x=5;
 axis.position.z=5;
 scenary.add(axis);
 
+control.target.set(5, 0, 5);
 control.autoRotate = true;
 
 window.addEventListener('resize', ()=> {
