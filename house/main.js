@@ -273,24 +273,25 @@ ground.position.z = 5;
 
 
 // white sticky substance
-const cementSmallY0 = new THREE.Mesh(cementL, cementM);
-cementSmallY0.position.x = 3.5;
-cementSmallY0.position.y = 4.25;
-cementSmallY0.scale.set(13, 9.99, 1);
+const cementWallY0 = new THREE.Mesh(cementL, cementM);
+cementWallY0.position.x = 3.5;
+cementWallY0.position.y = 4.25;
+cementWallY0.scale.set(13, 9.99, 1);
 
-const cementSmallY1 = new THREE.Mesh(cementL, cementM);
-cementSmallY1.scale.set(13, 9.99, 1);
+const cementWallY1 = new THREE.Mesh(cementL, cementM);
+cementWallY1.scale.set(13, 9.99, 1);
+ceme
 
-cementSmallY2.scale.set(0.25, 1, 1);
+cementWallY2.scale.set(0.25, 1, 1);
 
-const cementSmallY3 = new THREE.Mesh(cementL, cementM);
-cementSmallY3.position.x = 7.3;
-cementSmallY3.scale.set(0.25, 1, 1);
+const cementWallY3 = new THREE.Mesh(cementL, cementM);
+cementWallY3.position.x = 7.3;
+cementWallY3.scale.set(0.25, 1, 1);
 
-const cementSmallX = new THREE.Mesh(cementL, cementM);
-cementSmallX.position.y = 0.62;
-cementSmallX.position.x = 4.25;
-cementSmallX.scale.set(10.5, 0.25, 1);
+const cementWallX = new THREE.Mesh(cementL, cementM);
+cementWallX.position.y = 0.62;
+cementWallX.position.x = 4.25;
+cementWallX.scale.set(10.5, 0.25, 1);
 
 //groups
 const build = new THREE.Group();
@@ -341,11 +342,11 @@ build.add(build43);
 
 
 
-const cementSmallYGroup = new THREE.Group();
-cementSmallYGroup.add(cementSmallY0);
-// cementSmallYGroup.add(cementSmallY1);
-// cementSmallYGroup.add(cementSmallY2);
-// cementSmallYGroup.add(cementSmallY3);
+const cementWallYGroup = new THREE.Group();
+cementWallYGroup.add(cementWallY0);
+// cementWallYGroup.add(cementWallY1);
+// cementWallYGroup.add(cementWallY2);
+// cementWallYGroup.add(cementWallY3);
 
 const pillarGroup = new THREE.Group();
 pillarGroup.add(pillar0);
@@ -353,8 +354,8 @@ pillarGroup.add(pillar1);
 
 scenary.add(ground);
 scenary.add(build);
-scenary.add(cementSmallYGroup);
-scenary.add(cementSmallX);
+scenary.add(cementWallYGroup);
+scenary.add(cementWallX);
 scenary.add(pillarGroup);
 
 //camera and renderer
