@@ -12,6 +12,27 @@ const cubeM = new THREE.MeshBasicMaterial({
   color: "aqua"
 });
 
+const circleG = new THREE.CircleGeometry(1,32,1 , Math.PI);
+const circleM = new THREE.MeshBasicMaterial({
+  color: "yellow",
+  side: THREE.DoubleSide
+});
+
+const standG = new THREE.BoxGeometry(1,1,1);
+const standM = new THREE.MeshBasicMaterial({
+  color: 'darkgrey'
+})
+
+const bufferG = new THREE.SphereGeometry(1, 32, 16);
+const bufferM = new THREE.MeshBasicMaterial({
+  color: "grey"
+})
+
+const nozzleG = new THREE.CylinderGeometry(0.4, 0.4, 2, 32, 1);
+const nozzleM = new THREE.MeshBasicMaterial({
+  color: "#71797E"
+})
+
 
 //mesh
 const cube = new THREE.Mesh(cubeG, cubeM);
@@ -22,14 +43,32 @@ cube2.position.x = 4
 // cube.position.x = 2;
 // cube.position.y = 1;
 // console.log(cube);
+const circle = new THREE.Mesh(circleG, circleM);
+circle.position.y=3;
+
+const stand = new THREE.Mesh(standG, standM);
+stand.scale.set(2,2,2);
+const buffer = new THREE.Mesh(bufferG, bufferM);
+buffer.position.y=1.5;
+const nozzle = new THREE.Mesh(nozzleG, nozzleM);
+nozzle.position.y=1.5;
+nozzle.position.z=1.75;
+nozzle.rotateX(Math.PI/2);
+
 
 const group = new THREE.Group();
-
+const cannon = new THREE.Group();
+// cannon.add(stand);
+cannon.add(buffer);
+cannon.add(nozzle);
 group.add(cube);
 group.add(cube1);
 group.add(cube2);
 
-scene.add(group);
+// scene.add(group);
+// scene.add(circle);
+scene.add(cannon);
+scene.add(stand);
 
 //adding mesh to scence
 // scene.add(cube);
@@ -59,11 +98,12 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 //axishelper
-const axishelper = new THREE.AxesHelper(5);
+const axishelper = new THREE.AxesHelper(10);
 scene.add(axishelper);
 
 
 //orbit controller
+const control = new OrbitControls(camera, canvas);
 control.enableDamping = true;
 control.autoRotate = false;
 control.rotateSpeed = 3.5;
@@ -75,8 +115,14 @@ window.addEventListener('resize', ()=> {
 })
 
 
+const clock = new THREE.Clock();
+let t = clock.getElapsedTime();
+
 //making the renderloop
 const renderloop = () => {
+  let ti = clock.getDelta()
+  cannon.rotateY(Math.PI/4*ti);
+  // nozzle.rotateX(Math.sin(ti));
   control.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(renderloop);
