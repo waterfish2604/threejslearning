@@ -378,6 +378,139 @@ brickOnNegX42.position.set(-2, 8.75, 10);
 const brickOnNegX43 = brickOnNegX0.clone();
 brickOnNegX43.position.set(-2, 8.75, 12.25);
 
+const brickOnPosZ0 = new THREE.Mesh(wall, wallmat);
+brickOnPosZ0.scale.set(2, 1, 1.01);
+brickOnPosZ0.position.set(0, 0, 12.5);
+
+const brickOnPosZ1 = brickOnPosZ0.clone();
+brickOnPosZ1.position.set(2.25, 0, 12.5);
+
+const brickOnPosZ2 = brickOnPosZ0.clone();
+brickOnPosZ2.position.set(4.5, 0, 12.5);
+
+const brickOnPosZ3 = brickOnPosZ0.clone();
+brickOnPosZ3.position.set(6.75, 0, 12.5);
+
+const brickOnPosZ4 = brickOnPosZ0.clone();
+brickOnPosZ4.position.set(9, 0, 12.5);
+
+const brickOnPosZ5 = brickOnPosZ0.clone();
+brickOnPosZ5.position.set(-1, 1.25, 12.5);
+
+const brickOnPosZ6 = brickOnPosZ0.clone();
+brickOnPosZ6.position.set(1.25, 1.25, 12.5);
+
+const brickOnPosZ7 = brickOnPosZ0.clone();
+brickOnPosZ7.position.set(3.5, 1.25, 12.5);
+
+const brickOnPosZ8 = brickOnPosZ0.clone();
+brickOnPosZ8.position.set(5.75, 1.25, 12.5);
+
+const brickOnPosZ9 = brickOnPosZ0.clone();
+brickOnPosZ9.position.set(8, 1.25, 12.5);
+
+const brickOnPosZ10 = brickOnPosZ0.clone();
+brickOnPosZ10.position.set(10.25, 1.25, 12.5);
+
+const brickOnPosZ11 = brickOnPosZ0.clone();
+brickOnPosZ11.position.set(0, 2.5, 12.5);
+
+const brickOnPosZ12 = brickOnPosZ0.clone();
+brickOnPosZ12.position.set(2.25, 2.5, 12.5);
+
+const brickOnPosZ13 = brickOnPosZ0.clone();
+brickOnPosZ13.position.set(4.5, 2.5, 12.5);
+
+const brickOnPosZ14 = brickOnPosZ0.clone();
+brickOnPosZ14.position.set(6.75, 2.5, 12.5);
+
+const brickOnPosZ15 = brickOnPosZ0.clone();
+brickOnPosZ15.position.set(9, 2.5, 12.5);
+
+const brickOnPosZ16 = brickOnPosZ0.clone();
+brickOnPosZ16.position.set(-1, 3.75, 12.5);
+
+const brickOnPosZ17 = brickOnPosZ0.clone();
+brickOnPosZ17.position.set(1.25, 3.75, 12.5);
+
+const brickOnPosZ18 = brickOnPosZ0.clone();
+brickOnPosZ18.position.set(3.5, 3.75, 12.5);
+
+const brickOnPosZ19 = brickOnPosZ0.clone();
+brickOnPosZ19.position.set(5.75, 3.75, 12.5);
+
+const brickOnPosZ20 = brickOnPosZ0.clone();
+brickOnPosZ20.position.set(8, 3.75, 12.5);
+
+const brickOnPosZ21 = brickOnPosZ0.clone();
+brickOnPosZ21.position.set(10.25, 3.75, 12.5);
+
+const brickOnPosZ22 = brickOnPosZ0.clone();
+brickOnPosZ22.position.set(0, 5, 12.5);
+
+const brickOnPosZ23 = brickOnPosZ0.clone();
+brickOnPosZ23.position.set(2.25, 5, 12.5);
+
+const brickOnPosZ24 = brickOnPosZ0.clone();
+brickOnPosZ24.position.set(4.5, 5, 12.5);
+
+const brickOnPosZ25 = brickOnPosZ0.clone();
+brickOnPosZ25.position.set(6.75, 5, 12.5);
+
+const brickOnPosZ26 = brickOnPosZ0.clone();
+brickOnPosZ26.position.set(9, 5, 12.5);
+
+const brickOnPosZ27 = brickOnPosZ0.clone();
+brickOnPosZ27.position.set(-1, 6.25, 12.5);
+
+const brickOnPosZ28 = brickOnPosZ0.clone();
+brickOnPosZ28.position.set(1.25, 6.25, 12.5);
+
+const brickOnPosZ29 = brickOnPosZ0.clone();
+brickOnPosZ29.position.set(3.5, 6.25, 12.5);
+
+const brickOnPosZ30 = brickOnPosZ0.clone();
+brickOnPosZ30.position.set(5.75, 6.25, 12.5);
+
+const brickOnPosZ31 = brickOnPosZ0.clone();
+brickOnPosZ31.position.set(8, 6.25, 12.5);
+
+const brickOnPosZ32 = brickOnPosZ0.clone();
+brickOnPosZ32.position.set(10.25, 6.25, 12.5);
+
+const brickOnPosZ33 = brickOnPosZ0.clone();
+brickOnPosZ33.position.set(0, 7.5, 12.5);
+
+const brickOnPosZ34 = brickOnPosZ0.clone();
+brickOnPosZ34.position.set(2.25, 7.5, 12.5);
+
+const brickOnPosZ35 = brickOnPosZ0.clone();
+brickOnPosZ35.position.set(4.5, 7.5, 12.5);
+
+const brickOnPosZ36 = brickOnPosZ0.clone();
+brickOnPosZ36.position.set(6.75, 7.5, 12.5);
+
+const brickOnPosZ37 = brickOnPosZ0.clone();
+brickOnPosZ37.position.set(9, 7.5, 12.5);
+
+const brickOnPosZ38 = brickOnPosZ0.clone();
+brickOnPosZ38.position.set(-1, 8.75, 12.5);
+
+const brickOnPosZ39 = brickOnPosZ0.clone();
+brickOnPosZ39.position.set(1.25, 8.75, 12.5);
+
+const brickOnPosZ40 = brickOnPosZ0.clone();
+brickOnPosZ40.position.set(3.5, 8.75, 12.5);
+
+const brickOnPosZ41 = brickOnPosZ0.clone();
+brickOnPosZ41.position.set(5.75, 8.75, 12.5);
+
+const brickOnPosZ42 = brickOnPosZ0.clone();
+brickOnPosZ42.position.set(8, 8.75, 12.5);
+
+const brickOnPosZ43 = brickOnPosZ0.clone();
+brickOnPosZ43.position.set(10.25, 8.75, 12.5);
+
 
 // pillars
 const pillar0 = new THREE.Mesh(pillarG, pillarM);
@@ -415,27 +548,27 @@ ground.position.z = 6.5;
 const cementWallY0 = new THREE.Mesh(cementL, cementM);
 cementWallY0.position.x = 3.5;
 cementWallY0.position.y = 4.25;
-cementWallY0.scale.set(13, 9.99, 1);
+cementWallY0.scale.set(12.99, 9.99, 0.99);
 
 const cementWallY1 = new THREE.Mesh(cementL, cementM);
-cementWallY1.scale.set(1, 9.99, 13.001);
+cementWallY1.scale.set(0.99, 9.99, 12.99);
 cementWallY1.position.z=5.5;
 cementWallY1.position.x=-2;
 cementWallY1.position.y=4.25;
 
-// const cementWallY2 = new THREE.Mesh(cementL, cementM);
-// cementWallY2.position.x =3.5;
-// cementWallY2.scale.set(13, 9.99, 1);
-// cementWallY2.position.z=12.5;
-// cementWallY2.position.y=4.25;
+const cementWallY2 = new THREE.Mesh(cementL, cementM);
+cementWallY2.position.x =3.5;
+cementWallY2.scale.set(13, 9.99, 1);
+cementWallY2.position.z=12.5;
+cementWallY2.position.y=4.25;
 
 const cementWallY31 = cementWallY1.clone();
 cementWallY31.position.x=10.5;
-cementWallY31.position.z=3;
+cementWallY31.position.z=2.5;
 cementWallY31.scale.z=4;
 
 const cementWallY32 = cementWallY31.clone();
-cementWallY32.position.z=9.5;
+cementWallY32.position.z=10;
 
 
 
@@ -538,11 +671,56 @@ build.add(brickOnNegX41);
 build.add(brickOnNegX42);
 build.add(brickOnNegX43);
 
+build.add(brickOnPosZ0);
+build.add(brickOnPosZ1);
+build.add(brickOnPosZ2);
+build.add(brickOnPosZ3);
+build.add(brickOnPosZ4);
+build.add(brickOnPosZ5);
+build.add(brickOnPosZ6);
+build.add(brickOnPosZ7);
+build.add(brickOnPosZ8);
+build.add(brickOnPosZ9);
+build.add(brickOnPosZ10);
+build.add(brickOnPosZ11);
+build.add(brickOnPosZ12);
+build.add(brickOnPosZ13);
+build.add(brickOnPosZ14);
+build.add(brickOnPosZ15);
+build.add(brickOnPosZ16);
+build.add(brickOnPosZ17);
+build.add(brickOnPosZ18);
+build.add(brickOnPosZ19);
+build.add(brickOnPosZ20);
+build.add(brickOnPosZ21);
+build.add(brickOnPosZ22);
+build.add(brickOnPosZ23);
+build.add(brickOnPosZ24);
+build.add(brickOnPosZ25);
+build.add(brickOnPosZ26);
+build.add(brickOnPosZ27);
+build.add(brickOnPosZ28);
+build.add(brickOnPosZ29);
+build.add(brickOnPosZ30);
+build.add(brickOnPosZ31);
+build.add(brickOnPosZ32);
+build.add(brickOnPosZ33);
+build.add(brickOnPosZ34);
+build.add(brickOnPosZ35);
+build.add(brickOnPosZ36);
+build.add(brickOnPosZ37);
+build.add(brickOnPosZ38);
+build.add(brickOnPosZ39);
+build.add(brickOnPosZ40);
+build.add(brickOnPosZ41);
+build.add(brickOnPosZ42);
+build.add(brickOnPosZ43)
+
 
 const cementWallYGroup = new THREE.Group();
 cementWallYGroup.add(cementWallY0);
 cementWallYGroup.add(cementWallY1);
-// cementWallYGroup.add(cementWallY2);
+cementWallYGroup.add(cementWallY2);
 cementWallYGroup.add(cementWallY31);
 cementWallYGroup.add(cementWallY32);
 
@@ -563,7 +741,7 @@ const aspectRatio = window.innerWidth / window.innerHeight;
 const cam = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 300);
 
 cam.position.z = 21;
-cam.position.y = 10;
+cam.position.y = 19;
 cam.position.x = 21;
 scenary.add(cam);
 
@@ -582,6 +760,7 @@ axis.position.x = 5;
 axis.position.z = 5;
 scenary.add(axis);
 
+control.enableDamping=true;
 control.target.set(5, 0, 5);
 control.autoRotate = false;
 
