@@ -123,7 +123,7 @@ const renderloop = () => {
   const time = clock.getElapsedTime();
   cannon.rotateY(Math.PI/4*ti);
   nozzle.position.set(0,1.65,0.75);
-  nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/8);
+  nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/18);
   control.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(renderloop);
