@@ -52,8 +52,8 @@ const buffer = new THREE.Mesh(bufferG, bufferM);
 buffer.position.y=1.5;
 const nozzle = new THREE.Mesh(nozzleG, nozzleM);
 nozzle.position.y=1.5;
-nozzle.position.z=1.75;
-nozzle.rotateX(Math.PI/2);
+nozzle.position.z=1;
+
 
 
 const group = new THREE.Group();
@@ -116,13 +116,14 @@ window.addEventListener('resize', ()=> {
 
 
 const clock = new THREE.Clock();
-let t = clock.getElapsedTime();
 
 //making the renderloop
 const renderloop = () => {
   let ti = clock.getDelta()
+  const time = clock.getElapsedTime();
   cannon.rotateY(Math.PI/4*ti);
-  // nozzle.rotateX(Math.sin(ti));
+  nozzle.position.set(0,1.65,1);
+  nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/8);
   control.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(renderloop);
