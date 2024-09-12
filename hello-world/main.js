@@ -20,18 +20,21 @@ const circleM = new THREE.MeshBasicMaterial({
 
 const standG = new THREE.BoxGeometry(1,1,1);
 const standM = new THREE.MeshBasicMaterial({
-  color: 'darkgrey',
-  wireframe: true
+  color: 'black',
+  // transparent: true,
+  // opacity: 0.5
 })
 
 const bufferG = new THREE.SphereGeometry(1, 32, 16);
 const bufferM = new THREE.MeshBasicMaterial({
-  color: "grey"
+  color: "grey",
 })
 
 const nozzleG = new THREE.CylinderGeometry(0.4, 0.4, 2, 32, 1);
 const nozzleM = new THREE.MeshBasicMaterial({
-  color: "#71797E"
+  color: "#71797E",
+  transparent: true,
+  opacity: 0.5
 })
 
 
@@ -59,9 +62,9 @@ nozzle.position.z=1;
 
 const group = new THREE.Group();
 const cannon = new THREE.Group();
-// cannon.add(stand);
-// cannon.add(buffer);
-// cannon.add(nozzle);
+cannon.add(stand);
+cannon.add(buffer);
+cannon.add(nozzle);
 group.add(cube);
 group.add(cube1);
 group.add(cube2);
@@ -70,6 +73,9 @@ group.add(cube2);
 // scene.add(circle);
 scene.add(cannon);
 scene.add(stand);
+scene.background = new THREE.Color('white');
+const fog = new THREE.Fog('white', 0.1, 50);
+scene.fog = fog;
 
 //adding mesh to scence
 // scene.add(cube);
@@ -122,9 +128,9 @@ const clock = new THREE.Clock();
 const renderloop = () => {
   let ti = clock.getDelta()
   const time = clock.getElapsedTime();
-  // cannon.rotateY(Math.PI/4*ti);
-  // nozzle.position.set(0,1.65,0.75);
-  // nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/18);
+  cannon.rotateY(Math.PI/4*ti);
+  nozzle.position.set(0,1.65,0.75);
+  nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/18);
   stand.rotateY(Math.PI/4 * ti);
   control.update();
   renderer.render(scene, camera);
