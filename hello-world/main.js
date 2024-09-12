@@ -20,7 +20,8 @@ const circleM = new THREE.MeshBasicMaterial({
 
 const standG = new THREE.BoxGeometry(1,1,1);
 const standM = new THREE.MeshBasicMaterial({
-  color: 'darkgrey'
+  color: 'darkgrey',
+  wireframe: true
 })
 
 const bufferG = new THREE.SphereGeometry(1, 32, 16);
@@ -59,8 +60,8 @@ nozzle.position.z=1;
 const group = new THREE.Group();
 const cannon = new THREE.Group();
 // cannon.add(stand);
-cannon.add(buffer);
-cannon.add(nozzle);
+// cannon.add(buffer);
+// cannon.add(nozzle);
 group.add(cube);
 group.add(cube1);
 group.add(cube2);
@@ -121,9 +122,10 @@ const clock = new THREE.Clock();
 const renderloop = () => {
   let ti = clock.getDelta()
   const time = clock.getElapsedTime();
-  cannon.rotateY(Math.PI/4*ti);
-  nozzle.position.set(0,1.65,0.75);
-  nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/18);
+  // cannon.rotateY(Math.PI/4*ti);
+  // nozzle.position.set(0,1.65,0.75);
+  // nozzle.rotation.x=Math.PI/2 + (Math.sin(time) * Math.PI/18);
+  stand.rotateY(Math.PI/4 * ti);
   control.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(renderloop);
