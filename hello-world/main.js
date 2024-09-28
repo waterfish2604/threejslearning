@@ -6,6 +6,10 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 //creating a scene
 const scene = new THREE.Scene();
 
+const textureLoader = new THREE.TextureLoader();
+const texture = textureLoader.load('/media/textures/metal-compartments-bl/metal-compartments_ao.png');
+
+
 //geometry and mat than go in mesh
 const cubeG = new THREE.BoxGeometry(1,1,1);
 const cubeM = new THREE.MeshBasicMaterial({
@@ -20,7 +24,7 @@ const circleM = new THREE.MeshBasicMaterial({
 
 const standG = new THREE.BoxGeometry(1,1,1);
 const standM = new THREE.MeshBasicMaterial({
-  color: 'black',
+  color: 'white',
   // transparent: true,
   // opacity: 0.5
 })
@@ -28,14 +32,17 @@ const standM = new THREE.MeshBasicMaterial({
 const bufferG = new THREE.SphereGeometry(1, 32, 16);
 const bufferM = new THREE.MeshBasicMaterial({
   color: "grey",
+  map: texture
 })
 
 const nozzleG = new THREE.CylinderGeometry(0.4, 0.4, 2, 32, 1);
 const nozzleM = new THREE.MeshBasicMaterial({
-  color: "#71797E",
-  transparent: true,
-  opacity: 0.5
+  color: "#71797E"
 })
+
+//textures
+
+// bufferM.map = texture;
 
 
 //mesh
@@ -73,9 +80,9 @@ group.add(cube2);
 // scene.add(circle);
 scene.add(cannon);
 scene.add(stand);
-scene.background = new THREE.Color('white');
-const fog = new THREE.Fog('white', 0.1, 50);
-scene.fog = fog;
+// scene.background = new THREE.Color('white');
+// const fog = new THREE.Fog('white', 0.1, 50);
+// scene.fog = fog;
 
 //adding mesh to scence
 // scene.add(cube);
